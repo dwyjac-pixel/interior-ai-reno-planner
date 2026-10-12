@@ -14,6 +14,7 @@ APP = "Interior AI Reno Planner"
 COMPANY = "Caribinal Creations Ltd."
 CONTACT = "info@caribinalcreations.com"
 SITE = "https://caribinalcreations.ca"
+APP_STORE = "https://apps.apple.com/ca/app/id6804528486"
 
 
 def inline(text: str) -> str:
@@ -93,6 +94,9 @@ footer nav a{margin-right:16px}
 .card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:22px 24px;margin:18px 0}
 .hero{padding:40px 0 10px}.hero p{font-size:19px;color:var(--muted)}
 .btn{display:inline-block;background:var(--accent);color:#fff!important;padding:10px 16px;border-radius:10px;font-weight:600}
+.store{display:inline-flex;align-items:center;gap:10px;background:#000;color:#fff!important;padding:11px 20px;border-radius:12px;font-weight:600;font-size:17px;border:1px solid rgba(255,255,255,.25);text-decoration:none!important}
+.store svg{width:20px;height:20px;fill:#fff;flex:none}
+.store small{display:block;font-weight:400;font-size:12px;line-height:1.1;opacity:.85}
 @media (max-width:480px){body{font-size:16px}h1{font-size:28px}h2{font-size:20px}}
 """
 
@@ -146,6 +150,8 @@ def main() -> None:
     index_body = f"""<div class="hero">
 <h1>{APP}</h1>
 <p>Scan a basement with your iPhone or iPad, get a measured floor plan and 3D model, run the legal-suite compliance check, price the material takeoff, and hand the client a finished report — all from one app built by a Manitoba basement contractor.</p>
+<p style="margin:6px 0 0"><a class="store" href="{APP_STORE}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c0-2.5 2.05-3.7 2.14-3.76-1.17-1.7-2.98-1.94-3.62-1.97-1.54-.16-3.01.9-3.79.9-.78 0-1.99-.88-3.27-.86-1.68.03-3.23.98-4.1 2.48-1.75 3.03-.45 7.52 1.26 9.98.83 1.2 1.82 2.55 3.12 2.5 1.25-.05 1.73-.81 3.24-.81 1.51 0 1.94.81 3.27.79 1.35-.03 2.2-1.22 3.03-2.43.95-1.4 1.34-2.75 1.36-2.82-.03-.01-2.62-1-2.64-4zM13.9 5.25c.69-.84 1.16-2 1.03-3.16-1 .04-2.2.66-2.92 1.5-.64.74-1.2 1.93-1.05 3.07 1.11.09 2.25-.57 2.94-1.41z"/></svg><span><small>Download on the</small>App Store</span></a></p>
+<p style="margin:10px 0 0;color:var(--muted);font-size:15px">Free for iPhone and iPad. LiDAR scanning needs an iPhone 12 Pro or later or an iPad Pro; every other feature works on any device.</p>
 </div>
 <div class="card">
 <h2 style="margin-top:0">Support</h2>
